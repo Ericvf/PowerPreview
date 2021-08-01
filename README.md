@@ -10,4 +10,4 @@ Works for lots of file extensions:
 - TypeScript Java, XAML
 
 
-![Screenshot](https://github.com/Ericvf/Roslyn-Preview-Handlers/blob/8097b052e88ee2e46609913925395782dadf7a10/Capture.PNG)
+![Screenshot](https://github.com/Ericvf/Roslyn-Preview-Handlers/blob/4525fedc4e8c6aa8ece660ca3236ad43c5bc3dcb/Capture.PNG)
