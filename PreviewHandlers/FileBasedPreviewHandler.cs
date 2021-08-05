@@ -2,7 +2,8 @@ using System.IO;
 
 namespace PreviewHandlers
 {
-    public abstract class FileBasedPreviewHandler : PreviewHandler, IInitializeWithFile
+    public abstract class FileBasedPreviewHandler<T> : PreviewHandler<T>, IInitializeWithFile
+        where T : PreviewHandlerControl, new()
     {
         private string _filePath;
         private uint _fileMode;
@@ -13,9 +14,9 @@ namespace PreviewHandlers
             _fileMode = grfMode;
         }
 
-        protected override void Load(PreviewHandlerControl c)
+        protected override void DoPreview(T previewHandlerControl)
         {
-            c.Load(new FileInfo(_filePath));
+            previewHandlerControl.Preview(new FileInfo(_filePath));
         }
     }
 }

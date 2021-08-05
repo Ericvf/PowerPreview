@@ -1,3 +1,4 @@
+using Microsoft.Win32;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -5,29 +6,25 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using Microsoft.Win32;
 
 namespace PreviewHandlers
 {
-    public abstract class PreviewHandler : IPreviewHandler, IPreviewHandlerVisuals, IOleWindow, IObjectWithSite
+    public abstract class PreviewHandler<T> : IPreviewHandler, IPreviewHandlerVisuals, IOleWindow, IObjectWithSite
+        where T : PreviewHandlerControl, new()
     {
         private bool _showPreview;
-        private PreviewHandlerControl _previewControl;
+        private T _previewControl;
         private IntPtr _parentHwnd;
         private Rectangle _windowBounds;
         private object _unkSite;
         private IPreviewHandlerFrame _frame;
 
-        protected abstract PreviewHandlerControl CreatePreviewHandlerControl();
-
-        protected abstract void Load(PreviewHandlerControl c);
+        protected abstract void DoPreview(T c);
 
         protected PreviewHandler()
         {
-            _previewControl = CreatePreviewHandlerControl();
+            _previewControl = new T();
             _ = _previewControl.Handle;
-
-            _previewControl.BackColor = SystemColors.Window;
         }
 
         private void InvokeOnUIThread(MethodInvoker d)
@@ -70,7 +67,7 @@ namespace PreviewHandlers
             {
                 try
                 {
-                    Load(_previewControl);
+                    DoPreview(_previewControl);
                 }
                 catch (Exception exc)
                 {
@@ -200,7 +197,7 @@ namespace PreviewHandlers
 
         protected static void RegisterPreviewHandler(string name, string extensions, string previewerGuid, string appId)
         {
-            // Create a new prevhost AppID so that this always runs in its own isolated process
+            // Create a new prevhost AppID so that this always runs in its own isolated process``
             using (var appIdsKey = Registry.ClassesRoot.OpenSubKey("AppID", true))
             using (var appIdKey = appIdsKey.CreateSubKey(appId))
             {

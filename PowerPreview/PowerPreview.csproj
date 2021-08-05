@@ -7,8 +7,8 @@
     <ProjectGuid>{D6BA795B-BC62-43FB-BB47-823967126B03}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RoslynPreviewHandler</RootNamespace>
-    <AssemblyName>RoslynPreviewHandler</AssemblyName>
+    <RootNamespace>PowerPreview</RootNamespace>
+    <AssemblyName>PowerPreview</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -38,49 +38,33 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>RoslynPreviewHandler.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>PowerPreview.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="COMInstaller.cs">
+    <Compile Include="Installer\COMInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="COMInstaller.Designer.cs">
+    <Compile Include="Installer\COMInstaller.Designer.cs">
       <DependentUpon>COMInstaller.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoslynPreviewHandler.cs" />
-    <Compile Include="RoslynPreviewHostFactory.cs" />
-    <Compile Include="WindowHelpers.cs" />
+    <Compile Include="PowerPreviewHandler.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="FastColoredTextBox, Version=2.16.24.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL">
+      <HintPath>..\packages\FCTB.2.16.24\lib\FastColoredTextBox.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Management" />
-    <Reference Include="System.Numerics" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="uninstall.cmd">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
-    <None Include="RoslynPreviewHandler.snk" />
+    <None Include="PowerPreview.snk" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="readme.txt" />
-    <None Include="install.cmd">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\FastColoredTextBox\FastColoredTextBox\FastColoredTextBox.csproj">
-      <Project>{6dd14a85-ccfc-4774-bd26-0f5772512319}</Project>
-      <Name>FastColoredTextBox</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PreviewHandlers\PreviewHandlers.csproj">
       <Project>{64a8532b-87c7-44e4-b0ce-399e83758fa9}</Project>
       <Name>PreviewHandlers</Name>

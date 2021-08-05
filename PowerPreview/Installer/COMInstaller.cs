@@ -5,10 +5,10 @@ using System.Configuration.Install;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace RoslynPreviewHandler
+namespace PowerPreview
 {
     [RunInstaller(true)]
-    public partial class COMInstaller : System.Configuration.Install.Installer
+    public partial class COMInstaller : Installer
     {
         public COMInstaller()
         {

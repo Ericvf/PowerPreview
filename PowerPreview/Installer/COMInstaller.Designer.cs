@@ -1,4 +1,4 @@
-﻿namespace RoslynPreviewHandler
+﻿namespace PowerPreview
 {
     partial class COMInstaller
     {

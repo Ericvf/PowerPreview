@@ -1,19 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoslynPreviewHandler", "RoslynPreviewHandler\RoslynPreviewHandler.csproj", "{D6BA795B-BC62-43FB-BB47-823967126B03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerPreview", "PowerPreview\PowerPreview.csproj", "{D6BA795B-BC62-43FB-BB47-823967126B03}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreviewHandlers", "PreviewHandlers\PreviewHandlers.csproj", "{64A8532B-87C7-44E4-B0CE-399E83758FA9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreviewHandlerTester", "PreviewHandlerTester\PreviewHandlerTester.csproj", "{32FCB48C-A545-4168-A2CB-52A4C1C96FAA}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RoslynPreviewSetup", "RoslynPreviewSetup\RoslynPreviewSetup.vdproj", "{DA22AAED-919C-4C57-9131-6BCC646EBF6A}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PowerPreviewSetup", "PowerPreviewSetup\PowerPreviewSetup.vdproj", "{DA22AAED-919C-4C57-9131-6BCC646EBF6A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test tools", "Test tools", "{A2C3F15B-27BF-4FD6-BC7C-3B9E4AF63A08}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastColoredTextBox", "..\FastColoredTextBox\FastColoredTextBox\FastColoredTextBox.csproj", "{6DD14A85-CCFC-4774-BD26-0F5772512319}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		{32FCB48C-A545-4168-A2CB-52A4C1C96FAA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DA22AAED-919C-4C57-9131-6BCC646EBF6A}.Debug|Any CPU.ActiveCfg = Debug
 		{DA22AAED-919C-4C57-9131-6BCC646EBF6A}.Release|Any CPU.ActiveCfg = Release
-		{6DD14A85-CCFC-4774-BD26-0F5772512319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6DD14A85-CCFC-4774-BD26-0F5772512319}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6DD14A85-CCFC-4774-BD26-0F5772512319}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6DD14A85-CCFC-4774-BD26-0F5772512319}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

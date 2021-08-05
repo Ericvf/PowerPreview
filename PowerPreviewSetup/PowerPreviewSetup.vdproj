@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:RoslynPreviewSetup"
+"ProjectName" = "8:PowerPreviewSetup"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -15,24 +15,24 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_5FB1D1020505DE686ED940D48B4B6403"
+        "OwnerKey" = "8:_ADF100ABBBF14542AF86826F3CF30C62"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_962F125A1DD64624BF65E4304FAE0FE6"
+        "OwnerKey" = "8:_ADF100ABBBF14542AF86826F3CF30C62"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_ADF100ABBBF14542AF86826F3CF30C62"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C628D14BCFA6E87C1132A3D6961893AD"
-        "OwnerKey" = "8:_ADF100ABBBF14542AF86826F3CF30C62"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_CB50F2F6FEB870ECFA9994E045EE5C58"
-        "OwnerKey" = "8:_ADF100ABBBF14542AF86826F3CF30C62"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_ADF100ABBBF14542AF86826F3CF30C62"
         "MsmSig" = "8:_UNDEFINED"
@@ -40,13 +40,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C628D14BCFA6E87C1132A3D6961893AD"
+        "OwnerKey" = "8:_962F125A1DD64624BF65E4304FAE0FE6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CB50F2F6FEB870ECFA9994E045EE5C58"
+        "OwnerKey" = "8:_5FB1D1020505DE686ED940D48B4B6403"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -57,7 +57,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\RoslynPreviewSetup.msi"
+        "OutputFilename" = "8:Debug\\PowerPreviewSetup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -76,10 +76,10 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.8"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    "Name" = "8:Microsoft .NET Framework 4.8 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.8"
                     }
                 }
             }
@@ -89,7 +89,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\RoslynPreviewSetup.msi"
+        "OutputFilename" = "8:Release\\PowerPreviewSetup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -123,7 +123,7 @@
         {
             "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_0C3975EC2AE74003A03DCF0E48708997"
             {
-            "Name" = "8:Primary output from RoslynPreviewHandler (Active)"
+            "Name" = "8:Primary output from PowerPreview (Active)"
             "Condition" = "8:"
             "Object" = "8:_ADF100ABBBF14542AF86826F3CF30C62"
             "FileType" = "3:1"
@@ -137,7 +137,7 @@
             }
             "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_2B39A373F8C446DC971FFD16536F3EB5"
             {
-            "Name" = "8:Primary output from RoslynPreviewHandler (Active)"
+            "Name" = "8:Primary output from PowerPreview (Active)"
             "Condition" = "8:"
             "Object" = "8:_ADF100ABBBF14542AF86826F3CF30C62"
             "FileType" = "3:1"
@@ -151,7 +151,7 @@
             }
             "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_62AB494EC1224457A87ABEF54F590D97"
             {
-            "Name" = "8:Primary output from RoslynPreviewHandler (Active)"
+            "Name" = "8:Primary output from PowerPreview (Active)"
             "Condition" = "8:"
             "Object" = "8:_ADF100ABBBF14542AF86826F3CF30C62"
             "FileType" = "3:1"
@@ -165,7 +165,7 @@
             }
             "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_7650353D1D3B467FBC2D7E3EA7AF87AD"
             {
-            "Name" = "8:Primary output from RoslynPreviewHandler (Active)"
+            "Name" = "8:Primary output from PowerPreview (Active)"
             "Condition" = "8:"
             "Object" = "8:_ADF100ABBBF14542AF86826F3CF30C62"
             "FileType" = "3:1"
@@ -200,20 +200,20 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C628D14BCFA6E87C1132A3D6961893AD"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5FB1D1020505DE686ED940D48B4B6403"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:PreviewHandlers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9abc6bc2592930a0, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:FastColoredTextBox, Version=2.16.24.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_C628D14BCFA6E87C1132A3D6961893AD"
+                    "_5FB1D1020505DE686ED940D48B4B6403"
                     {
-                    "Name" = "8:PreviewHandlers.dll"
+                    "Name" = "8:FastColoredTextBox.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:PreviewHandlers.dll"
+            "SourcePath" = "8:FastColoredTextBox.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_67481D577C994E359206A2A15F9D4A9D"
@@ -231,20 +231,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CB50F2F6FEB870ECFA9994E045EE5C58"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_962F125A1DD64624BF65E4304FAE0FE6"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:FastColoredTextBox, Version=2.16.24.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:PreviewHandlers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9abc6bc2592930a0, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_CB50F2F6FEB870ECFA9994E045EE5C58"
+                    "_962F125A1DD64624BF65E4304FAE0FE6"
                     {
-                    "Name" = "8:FastColoredTextBox.dll"
+                    "Name" = "8:PreviewHandlers.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:FastColoredTextBox.dll"
+            "SourcePath" = "8:PreviewHandlers.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_67481D577C994E359206A2A15F9D4A9D"
@@ -281,7 +281,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_67481D577C994E359206A2A15F9D4A9D"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFiles64Folder][Manufacturer]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -317,9 +317,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:RoslynPreviewSetup"
+        "ProductName" = "8:Power Preview"
         "ProductCode" = "8:{95C77B90-AD5A-44E5-B3C0-31CC97D9DE4F}"
-        "PackageCode" = "8:{136CFF85-D7E0-4D1F-8EC9-0B9C4820313E}"
+        "PackageCode" = "8:{743DB3FC-AE00-4167-A7A1-1475F4D90395}"
         "UpgradeCode" = "8:{F33CC551-70A8-4067-9EC8-C0796E978EE2}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -330,7 +330,7 @@
         "Manufacturer" = "8:Appbyfex"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:RoslynPreviewSetup"
+        "Title" = "8:Power Preview"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Appbyfex"
         "Keywords" = "8:"
@@ -340,7 +340,7 @@
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
-        "TargetPlatform" = "3:0"
+        "TargetPlatform" = "3:1"
         "PreBuildEvent" = "8:"
         "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"
@@ -840,7 +840,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_ADF100ABBBF14542AF86826F3CF30C62"
             {
-            "SourcePath" = "8:..\\RoslynPreviewHandler\\obj\\Release\\RoslynPreviewHandler.dll"
+            "SourcePath" = "8:..\\PowerPreview\\obj\\Debug\\PowerPreview.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_67481D577C994E359206A2A15F9D4A9D"
