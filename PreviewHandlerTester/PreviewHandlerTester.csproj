@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{32FCB48C-A545-4168-A2CB-52A4C1C96FAA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PreviewHandlerTester</RootNamespace>
-    <AssemblyName>PreviewHandlerTester</AssemblyName>
+    <RootNamespace>PowerPreviewTester</RootNamespace>
+    <AssemblyName>PowerPreviewTester</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FastColoredTextBox, Version=2.16.24.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL">
+      <HintPath>..\packages\FCTB.2.16.24\lib\FastColoredTextBox.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Drawing" />
@@ -47,16 +50,16 @@
     <None Include="cs\SystemProperties.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,9 +83,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="cs\highlighter.php">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -91,17 +91,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\FastColoredTextBox\FastColoredTextBox\FastColoredTextBox.csproj">
-      <Project>{6dd14a85-ccfc-4774-bd26-0f5772512319}</Project>
-      <Name>FastColoredTextBox</Name>
+    <ProjectReference Include="..\PowerPreview\PowerPreview.csproj">
+      <Project>{d6ba795b-bc62-43fb-bb47-823967126b03}</Project>
+      <Name>PowerPreview</Name>
     </ProjectReference>
     <ProjectReference Include="..\PreviewHandlers\PreviewHandlers.csproj">
       <Project>{64a8532b-87c7-44e4-b0ce-399e83758fa9}</Project>
       <Name>PreviewHandlers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RoslynPreviewHandler\RoslynPreviewHandler.csproj">
-      <Project>{d6ba795b-bc62-43fb-bb47-823967126b03}</Project>
-      <Name>RoslynPreviewHandler</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

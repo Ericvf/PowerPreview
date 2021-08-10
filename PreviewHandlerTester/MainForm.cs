@@ -3,24 +3,22 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 using FastColoredTextBoxNS;
-using PreviewHandlers;
-using RoslynPreviewHandler;
 
-namespace PreviewHandlerTester
+namespace PowerPreviewTester
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private static Stopwatch stopWatch = new Stopwatch();
 
-        private readonly IPreviewHostFactory previewHostFactory;
+        private readonly PowerPreview.PowerPreviewHandler.PowerPreview previewHostFactory;
         private FastColoredTextBox fctb;
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             Load += Form1_Load;
 
-            previewHostFactory = new RoslynPreviewHostFactory();
+            previewHostFactory = new PowerPreview.PowerPreviewHandler.PowerPreview();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,7 +37,8 @@ namespace PreviewHandlerTester
 
             stopWatch.Restart();
 
-            fctb = previewHostFactory.Load(fileInfo) as FastColoredTextBox;
+            fctb = previewHostFactory.LoadControl(fileInfo) as FastColoredTextBox;
+            panel1.Controls.Clear();
             panel1.Controls.Add(fctb);
 
             stopWatch.Stop();

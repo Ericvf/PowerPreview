@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreviewHandlerTester", "Pre
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PowerPreviewSetup", "PowerPreviewSetup\PowerPreviewSetup.vdproj", "{DA22AAED-919C-4C57-9131-6BCC646EBF6A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test tools", "Test tools", "{A2C3F15B-27BF-4FD6-BC7C-3B9E4AF63A08}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,9 +34,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{32FCB48C-A545-4168-A2CB-52A4C1C96FAA} = {A2C3F15B-27BF-4FD6-BC7C-3B9E4AF63A08}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {42B8450A-F37F-436C-86BA-C10A6258B91B}
