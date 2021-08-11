@@ -1,4 +1,4 @@
-# Roslyn Preview Handlers
+# Power Preview 
 
 Windows explorer preview handlers for developers
 
