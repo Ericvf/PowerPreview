@@ -1,4 +1,4 @@
-# Roslyn Preview Handlers
+# Power Preview 
 
 Windows explorer preview handlers for developers
 
@@ -11,3 +11,6 @@ Works for lots of file extensions:
 
 
 ![Screenshot](https://github.com/Ericvf/Roslyn-Preview-Handlers/blob/4525fedc4e8c6aa8ece660ca3236ad43c5bc3dcb/Capture.PNG)
+
+Special thanks to: https://github.com/PavelTorgashov/FastColoredTextBox
+
