@@ -118,25 +118,25 @@ namespace PowerPreview
                     Dock = DockStyle.Fill,
                     Language = language,
                     ReadOnly = true,
+                    Font = new Font("Cascadia Code", 8),
+                    DefaultMarkerSize = 10,
                 };
 
-
-                var windowTitle = GetActiveWindowTitle();
                 var wordsToHighlight = Enumerable.Empty<string>();
 
+                var windowTitle = GetActiveWindowTitle();
                 if (windowTitle != null)
                 {
                     var matches = ContentRegex.Matches(windowTitle);
-
 
                     wordsToHighlight =
                         (from x in matches.Cast<Match>()
                          let l = x.Groups.Cast<Group>().Last(a => !string.IsNullOrEmpty(a.Value))
                          select l.Value).ToArray();
-                }
 
-                fctb.VisibleRangeChangedDelayed += (s, e) => UpdateVisibleRange(fctb, language, wordsToHighlight);
-                fctb.TextChangedDelayed += (s, e) => UpdateVisibleRange(fctb, language, wordsToHighlight);
+                    fctb.VisibleRangeChangedDelayed += (s, e) => UpdateVisibleRange(fctb, language, wordsToHighlight);
+                    fctb.TextChangedDelayed += (s, e) => UpdateVisibleRange(fctb, language, wordsToHighlight);
+                }
 
                 if (fileInfo.Length < 25 * 1024)
                 {
