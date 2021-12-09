@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace PowerPreview
 {
-    [PreviewHandler("Power Preview Handler", ".cs;.vb;.html;.sql;.xml;.config;.csproj;.js;.json;.bim;.sln;.c;.cpp;.h;.ahk;.hpp;.cshtml;.ts;.ps1;.xaml;.cmd;.ino;.rs;.php;.bat;.pas;.razor", "{29AFE73A-29FD-426D-A87E-8FF8315BFF2D}")]
+    [PreviewHandler("Power Preview Handler", ".cs;.vb;.html;.sql;.xml;.config;.csproj;.js;.json;.bim;.sln;.c;.cpp;.h;.ahk;.hpp;.cshtml;.ts;.ps1;.xaml;.cmd;.ino;.rs;.php;.bat;.pas;.razor;.yml", "{29AFE73A-29FD-426D-A87E-8FF8315BFF2D}")]
     [ProgId("PowerPreview.PowerPreviewHandler")]
     [Guid("DB9FC691-1525-4D40-B758-55EF949290A2")]
     [ClassInterface(ClassInterfaceType.None)]
@@ -87,6 +87,7 @@ namespace PowerPreview
                     case ".sqlproj":
                     case ".vbproj":
                     case ".sln":
+                    case ".yml":
                         return Language.XML;
 
                     default:
