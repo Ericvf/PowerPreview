@@ -1,1 +1,1 @@
-C:\Windows\SysWOW64\regsvr32.exe PowerPreview.dll
+C:\Windows\SysWOW64\regsvr32.exe PowerPreview.comhost.dll

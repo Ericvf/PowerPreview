@@ -15,8 +15,20 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_9E0090B363D348F795D0FB7D52D7DD3B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_ADF100ABBBF14542AF86826F3CF30C62"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9E0090B363D348F795D0FB7D52D7DD3B"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -91,6 +103,34 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_0A490F096AC74034A99BE37ED9363F97"
+            {
+            "Name" = "8:Primary output from Installer (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_9E0090B363D348F795D0FB7D52D7DD3B"
+            "FileType" = "3:2"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:/u"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_452F068C_B201_400E_9F71_C04ED4D57628"
+            "InstallerClass" = "11:FALSE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_ACE55CAEFDBC45E58172522478632C45"
+            {
+            "Name" = "8:Primary output from Installer (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_9E0090B363D348F795D0FB7D52D7DD3B"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_FBF34554_6F17_4E16_8F19_0DE4C9827B3A"
+            "InstallerClass" = "11:FALSE"
+            "CustomActionData" = "8:"
+            }
         }
         "DefaultFeature"
         {
@@ -102,6 +142,24 @@
         {
             "LaunchCondition"
             {
+                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_202744CA6E954EA2A92A3046069BF3C9"
+                {
+                "Name" = "8:.NET Framework"
+                "Message" = "8:[VSDNETMSG]"
+                "FrameworkVersion" = "8:.NETFramework,Version=v4.7.2"
+                "AllowLaterVersions" = "11:FALSE"
+                "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=863262"
+                }
+                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_4B8572E780514F2A9C587AE9E27473BD"
+                {
+                "Name" = "8:.NET Core"
+                "Message" = "8:[VSDNETCOREMSG]"
+                "AllowLaterVersions" = "11:FALSE"
+                "InstallUrl" = "8:https://dotnet.microsoft.com/download/dotnet-core/[NetCoreVerMajorDotMinor]"
+                "IsNETCore" = "11:TRUE"
+                "Architecture" = "2:0"
+                "Runtime" = "2:0"
+                }
             }
         }
         "File"
@@ -174,7 +232,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Power Preview"
         "ProductCode" = "8:{95C77B90-AD5A-44E5-B3C0-31CC97D9DE4F}"
-        "PackageCode" = "8:{2A113FF3-553D-4F25-95CA-190324095963}"
+        "PackageCode" = "8:{FF1B0992-0BB0-49C7-BDA6-D61B65DBBBCA}"
         "UpgradeCode" = "8:{F33CC551-70A8-4067-9EC8-C0796E978EE2}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -693,6 +751,34 @@
         }
         "ProjectOutput"
         {
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_9E0090B363D348F795D0FB7D52D7DD3B"
+            {
+            "SourcePath" = "8:..\\Installer\\obj\\Release\\Installer.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_67481D577C994E359206A2A15F9D4A9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{75DC2F66-6EA3-42C3-A311-8E64067B3F7F}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_CCA8E060DB644CA7B1094B2484FE62C1"
             {
             "SourcePath" = "8:"

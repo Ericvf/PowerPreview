@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerPreview", "PowerPreview\PowerPreview.csproj", "{D6BA795B-BC62-43FB-BB47-823967126B03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerPreview", "PowerPreview\PowerPreview.csproj", "{D6BA795B-BC62-43FB-BB47-823967126B03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreviewHandlerTester", "PreviewHandlerTester\PreviewHandlerTester.csproj", "{32FCB48C-A545-4168-A2CB-52A4C1C96FAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PreviewHandlerTester", "PreviewHandlerTester\PreviewHandlerTester.csproj", "{32FCB48C-A545-4168-A2CB-52A4C1C96FAA}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PowerPreviewSetup", "PowerPreviewSetup\PowerPreviewSetup.vdproj", "{DA22AAED-919C-4C57-9131-6BCC646EBF6A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PreviewHandlers", "PreviewHandlers\PreviewHandlers.csproj", "{36C3AAEB-03D4-4617-8D63-98B29C89562B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastColoredTextBox", "..\FastColoredTextBox2\FastColoredTextBox\FastColoredTextBox.csproj", "{A846844F-3EE9-4BEA-8B8A-EBD0931BB4AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Installer", "Installer\Installer.csproj", "{75DC2F66-6EA3-42C3-A311-8E64067B3F7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{A846844F-3EE9-4BEA-8B8A-EBD0931BB4AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A846844F-3EE9-4BEA-8B8A-EBD0931BB4AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A846844F-3EE9-4BEA-8B8A-EBD0931BB4AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75DC2F66-6EA3-42C3-A311-8E64067B3F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75DC2F66-6EA3-42C3-A311-8E64067B3F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75DC2F66-6EA3-42C3-A311-8E64067B3F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75DC2F66-6EA3-42C3-A311-8E64067B3F7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
