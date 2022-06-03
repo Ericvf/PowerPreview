@@ -1,11 +1,7 @@
 using Microsoft.Win32;
-using System;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
 
 namespace PreviewHandlers
 {
@@ -16,8 +12,8 @@ namespace PreviewHandlers
         private T _previewControl;
         private IntPtr _parentHwnd;
         private Rectangle _windowBounds;
-        private object _unkSite;
-        private IPreviewHandlerFrame _frame;
+        private object? _unkSite;
+        private IPreviewHandlerFrame? _frame;
 
         protected abstract void DoPreview(T c);
 
@@ -159,12 +155,12 @@ namespace PreviewHandlers
         void IObjectWithSite.SetSite(object pUnkSite)
         {
             _unkSite = pUnkSite;
-            _frame = _unkSite as IPreviewHandlerFrame;
+            _frame = (IPreviewHandlerFrame)_unkSite;
         }
 
         void IObjectWithSite.GetSite(ref Guid riid, out object ppvSite)
         {
-            ppvSite = _unkSite;
+            ppvSite = _unkSite!;
         }
 
         #endregion
@@ -199,24 +195,24 @@ namespace PreviewHandlers
         {
             // Create a new prevhost AppID so that this always runs in its own isolated process``
             using (var appIdsKey = Registry.ClassesRoot.OpenSubKey("AppID", true))
-            using (var appIdKey = appIdsKey.CreateSubKey(appId))
+            using (var appIdKey = appIdsKey?.CreateSubKey(appId))
             {
-                appIdKey.SetValue("DllSurrogate", @"%SystemRoot%\system32\prevhost.exe", RegistryValueKind.ExpandString);
+                appIdKey?.SetValue("DllSurrogate", @"%SystemRoot%\system32\prevhost.exe", RegistryValueKind.ExpandString);
             }
 
             // Add preview handler to preview handler list
             using (var handlersKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\PreviewHandlers", true))
             {
-                handlersKey.SetValue(previewerGuid, name, RegistryValueKind.String);
+                handlersKey?.SetValue(previewerGuid, name, RegistryValueKind.String);
             }
 
             // Modify preview handler registration
             using (var clsidKey = Registry.ClassesRoot.OpenSubKey("CLSID"))
-            using (var idKey = clsidKey.OpenSubKey(previewerGuid, true))
+            using (var idKey = clsidKey?.OpenSubKey(previewerGuid, true))
             {
-                idKey.SetValue("DisplayName", name, RegistryValueKind.String);
-                idKey.SetValue("AppID", appId, RegistryValueKind.String);
-                idKey.SetValue("DisableLowILProcessIsolation", 1, RegistryValueKind.DWord); // optional, depending on what preview handler needs to be able to do
+                idKey?.SetValue("DisplayName", name, RegistryValueKind.String);
+                idKey?.SetValue("AppID", appId, RegistryValueKind.String);
+                idKey?.SetValue("DisableLowILProcessIsolation", 1, RegistryValueKind.DWord); // optional, depending on what preview handler needs to be able to do
             }
 
             foreach (var extension in extensions.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries))
@@ -241,18 +237,18 @@ namespace PreviewHandlers
 
                 using (var shellexKey = Registry.ClassesRoot.OpenSubKey(extension + "\\shellex", true))
                 {
-                    shellexKey.DeleteSubKey("{8895b1c6-b41f-4c1c-a562-0d564250836f}");
+                    shellexKey?.DeleteSubKey("{8895b1c6-b41f-4c1c-a562-0d564250836f}");
                 }
             }
 
             using (var appIdsKey = Registry.ClassesRoot.OpenSubKey("AppID", true))
             {
-                appIdsKey.DeleteSubKey(appId);
+                appIdsKey?.DeleteSubKey(appId);
             }
 
             using (var classesKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\PreviewHandlers", true))
             {
-                classesKey.DeleteValue(previewerGuid);
+                classesKey?.DeleteValue(previewerGuid);
             }
         }
     }

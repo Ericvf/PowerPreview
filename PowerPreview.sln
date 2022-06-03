@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31515.178
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerPreview", "PowerPreview\PowerPreview.csproj", "{D6BA795B-BC62-43FB-BB47-823967126B03}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreviewHandlers", "PreviewHandlers\PreviewHandlers.csproj", "{64A8532B-87C7-44E4-B0CE-399E83758FA9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreviewHandlerTester", "PreviewHandlerTester\PreviewHandlerTester.csproj", "{32FCB48C-A545-4168-A2CB-52A4C1C96FAA}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PowerPreviewSetup", "PowerPreviewSetup\PowerPreviewSetup.vdproj", "{DA22AAED-919C-4C57-9131-6BCC646EBF6A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PreviewHandlers", "PreviewHandlers\PreviewHandlers.csproj", "{36C3AAEB-03D4-4617-8D63-98B29C89562B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastColoredTextBox", "..\FastColoredTextBox2\FastColoredTextBox\FastColoredTextBox.csproj", "{A846844F-3EE9-4BEA-8B8A-EBD0931BB4AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,16 +23,20 @@ Global
 		{D6BA795B-BC62-43FB-BB47-823967126B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6BA795B-BC62-43FB-BB47-823967126B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6BA795B-BC62-43FB-BB47-823967126B03}.Release|Any CPU.Build.0 = Release|Any CPU
-		{64A8532B-87C7-44E4-B0CE-399E83758FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64A8532B-87C7-44E4-B0CE-399E83758FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64A8532B-87C7-44E4-B0CE-399E83758FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64A8532B-87C7-44E4-B0CE-399E83758FA9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{32FCB48C-A545-4168-A2CB-52A4C1C96FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{32FCB48C-A545-4168-A2CB-52A4C1C96FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32FCB48C-A545-4168-A2CB-52A4C1C96FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32FCB48C-A545-4168-A2CB-52A4C1C96FAA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DA22AAED-919C-4C57-9131-6BCC646EBF6A}.Debug|Any CPU.ActiveCfg = Debug
 		{DA22AAED-919C-4C57-9131-6BCC646EBF6A}.Release|Any CPU.ActiveCfg = Release
+		{36C3AAEB-03D4-4617-8D63-98B29C89562B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36C3AAEB-03D4-4617-8D63-98B29C89562B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36C3AAEB-03D4-4617-8D63-98B29C89562B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36C3AAEB-03D4-4617-8D63-98B29C89562B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A846844F-3EE9-4BEA-8B8A-EBD0931BB4AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A846844F-3EE9-4BEA-8B8A-EBD0931BB4AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A846844F-3EE9-4BEA-8B8A-EBD0931BB4AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A846844F-3EE9-4BEA-8B8A-EBD0931BB4AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

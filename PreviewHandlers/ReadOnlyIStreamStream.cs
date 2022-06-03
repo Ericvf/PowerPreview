@@ -6,7 +6,7 @@ namespace PreviewHandlers
 {
     public class ReadOnlyIStreamStream : Stream
     {
-        private IStream _stream;
+        private IStream? _stream;
 
         public ReadOnlyIStreamStream(IStream stream)
         {
@@ -32,6 +32,7 @@ namespace PreviewHandlers
             if (buffer == null) throw new ArgumentNullException("buffer");
             if (offset < 0) throw new ArgumentNullException("offset");
             if (count < 0) throw new ArgumentNullException("count");
+            if (_stream == null) throw new ArgumentNullException("stream");
 
             int bytesRead = 0;
             if (count > 0)
@@ -65,7 +66,7 @@ namespace PreviewHandlers
                 ThrowIfDisposed();
                 const int STATFLAG_NONAME = 1;
                 STATSTG stats;
-                _stream.Stat(out stats, STATFLAG_NONAME);
+                _stream!.Stat(out stats, STATFLAG_NONAME);
                 return stats.cbSize;
             }
         }
@@ -89,7 +90,7 @@ namespace PreviewHandlers
             ThrowIfDisposed();
             long pos = 0;
             IntPtr posPtr = new IntPtr((void*)&pos);
-            _stream.Seek(offset, (int)origin, posPtr);
+            _stream?.Seek(offset, (int)origin, posPtr);
             return pos;
         }
 

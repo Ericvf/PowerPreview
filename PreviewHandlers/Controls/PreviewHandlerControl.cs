@@ -30,18 +30,21 @@ namespace PreviewHandlers
 
             foreach (var loaderException in ex.LoaderExceptions)
             {
-                stringBuilder.AppendLine(loaderException.Message);
-
-                if (loaderException is FileNotFoundException fileNotFoundException)
+                if (loaderException is not null)
                 {
-                    if (!string.IsNullOrEmpty(fileNotFoundException.FusionLog))
-                    {
-                        stringBuilder.AppendLine("Fusion Log:");
-                        stringBuilder.AppendLine(fileNotFoundException.FusionLog);
-                    }
-                }
+                    stringBuilder.AppendLine(loaderException.Message);
 
-                stringBuilder.AppendLine();
+                    if (loaderException is FileNotFoundException fileNotFoundException)
+                    {
+                        if (!string.IsNullOrEmpty(fileNotFoundException.FusionLog))
+                        {
+                            stringBuilder.AppendLine("Fusion Log:");
+                            stringBuilder.AppendLine(fileNotFoundException.FusionLog);
+                        }
+                    }
+
+                    stringBuilder.AppendLine();
+                }
             }
 
             return stringBuilder.ToString();

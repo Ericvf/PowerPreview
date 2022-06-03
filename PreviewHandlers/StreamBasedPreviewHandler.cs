@@ -5,7 +5,7 @@ namespace PreviewHandlers
     public abstract partial class StreamBasedPreviewHandler<T> : PreviewHandler<T>, IInitializeWithStream
         where T : PreviewHandlerControl, new()
     {
-        private IStream _stream;
+        private IStream? _stream;
         private uint _streamMode;
 
         void IInitializeWithStream.Initialize(IStream pstream, uint grfMode)
@@ -16,7 +16,10 @@ namespace PreviewHandlers
 
         protected override void DoPreview(T previewHandlerControl)
         {
-            previewHandlerControl.Preview(new ReadOnlyIStreamStream(_stream));
+            if (_stream != null)
+            {
+                previewHandlerControl.Preview(new ReadOnlyIStreamStream(_stream));
+            }
         }
     }
 }

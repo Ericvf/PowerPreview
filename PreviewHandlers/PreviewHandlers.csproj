@@ -1,85 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{64A8532B-87C7-44E4-B0CE-399E83758FA9}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PreviewHandlers</RootNamespace>
-    <AssemblyName>PreviewHandlers</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>PreviewHandlers.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="ComObjects\COLORREF.cs" />
-    <Compile Include="ComObjects\IInitializeWithFile.cs" />
-    <Compile Include="ComObjects\IInitializeWithStream.cs" />
-    <Compile Include="ComObjects\IObjectWithSite.cs" />
-    <Compile Include="ComObjects\IOleWindow.cs" />
-    <Compile Include="ComObjects\IPreviewHandler.cs" />
-    <Compile Include="ComObjects\IPreviewHandlerFrame.cs" />
-    <Compile Include="ComObjects\IPreviewHandlerVisuals.cs" />
-    <Compile Include="ComObjects\LOGFONT.cs" />
-    <Compile Include="ComObjects\MSG.cs" />
-    <Compile Include="ComObjects\RECT.cs" />
-    <Compile Include="FileBasedPreviewHandler.cs" />
-    <Compile Include="Controls\FileBasedPreviewHandlerControl.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PreviewHandler.cs" />
-    <Compile Include="PreviewHandlerAttribute.cs" />
-    <Compile Include="Controls\PreviewHandlerControl.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReadOnlyIStreamStream.cs" />
-    <Compile Include="StreamBasedPreviewHandler.cs" />
-    <Compile Include="Controls\StreamBasedPreviewHandlerControl.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User32.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Configuration.Install" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Design" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <None Include="PreviewHandlers.snk" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<SignAssembly>False</SignAssembly>
+		<AssemblyOriginatorKeyFile>PreviewHandlers.snk</AssemblyOriginatorKeyFile>
+		<UseWindowsForms>true</UseWindowsForms>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<EnableComHosting>true</EnableComHosting>
+		<DebugType>full</DebugType>
+		<IsPublishable>False</IsPublishable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+	</ItemGroup>
+
 </Project>

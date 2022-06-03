@@ -1,10 +1,7 @@
 using FastColoredTextBoxNS;
 using PreviewHandlers;
-using System;
-using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
-using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -23,12 +20,11 @@ namespace PowerPreview
         public class PowerPreview : FileBasedPreviewHandlerControl
         {
             private static readonly Regex ContentRegex = new Regex("content:(\"([^\"]*)\"|'([^']*)'|[^\\s]*)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-            private static readonly Style HighlightStyle = new TextStyle(null, Brushes.Yellow, FontStyle.Regular);
-            private static readonly Style BlueStyle = new TextStyle(Brushes.Blue, null, FontStyle.Regular);
+            private static readonly Style HighlightStyle = new TextStyle(new SolidBrush(Color.FromArgb(255, 30, 30, 30)), Brushes.LightYellow, FontStyle.Regular);
 
             private static int NumberOfFilesPreviewed = 0;
 
-            public static string GetActiveWindowTitle()
+            public static string? GetActiveWindowTitle()
             {
                 const int maxLength = 256;
                 var stringBuilder = new StringBuilder(maxLength);
@@ -39,7 +35,7 @@ namespace PowerPreview
                     return stringBuilder.ToString();
                 }
 
-                return null;
+                return default;
             }
 
             private static Language GetLanguageForExtension(string extension)
@@ -102,9 +98,6 @@ namespace PowerPreview
                 foreach (var word in wordsToHighlight)
                     range.SetStyle(HighlightStyle, new Regex(word, RegexOptions.Compiled | RegexOptions.IgnoreCase));
 
-                if (language == Language.CSharp)
-                    range.SetStyle(BlueStyle, "async|await");
-
                 fctb.SyntaxHighlighter.HighlightSyntax(language, range);
             }
 
@@ -119,8 +112,12 @@ namespace PowerPreview
                     Dock = DockStyle.Fill,
                     Language = language,
                     ReadOnly = true,
-                    Font = new Font("Cascadia Code", 8),
+                    Font = new Font("Cascadia Mono", 10),
+                     ForeColor = Color.Gainsboro,
+                     BackColor = Color.FromArgb(255,30,30,30),
                     DefaultMarkerSize = 10,
+                    IndentBackColor = Color.FromArgb(255,30,30,30),
+                    LineNumberColor = Color.FromArgb(255,43,145,175),
                 };
 
                 var wordsToHighlight = Enumerable.Empty<string>();

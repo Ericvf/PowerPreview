@@ -11,7 +11,7 @@ namespace PowerPreviewTester
         private static Stopwatch stopWatch = new Stopwatch();
 
         private readonly PowerPreview.PowerPreviewHandler.PowerPreview previewHostFactory;
-        private FastColoredTextBox fctb;
+        private FastColoredTextBox? fctb;
 
         public MainForm()
         {
@@ -21,30 +21,33 @@ namespace PowerPreviewTester
             previewHostFactory = new PowerPreview.PowerPreviewHandler.PowerPreview();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object? sender, EventArgs e)
         {
             listBox1.Items.AddRange(Directory.GetFiles("cs"));
             listBox1.SelectedValueChanged += ListBox1_SelectedValueChanged;
         }
 
-        private void ListBox1_SelectedValueChanged(object sender, EventArgs e)
+        private void ListBox1_SelectedValueChanged(object? sender, EventArgs e)
         {
             fctb?.CloseBindingFile();
             panel1.Controls.Remove(fctb);
 
             var filename = listBox1.SelectedItem.ToString();
-            var fileInfo = new FileInfo(filename);
+            if (filename is not null)
+            {
+                var fileInfo = new FileInfo(filename);
 
-            stopWatch.Restart();
+                stopWatch.Restart();
 
-            fctb = previewHostFactory.LoadControl(fileInfo) as FastColoredTextBox;
-            panel1.Controls.Clear();
-            panel1.Controls.Add(fctb);
+                fctb = (FastColoredTextBox)previewHostFactory.LoadControl(fileInfo);
+                panel1.Controls.Clear();
+                panel1.Controls.Add(fctb);
 
-            stopWatch.Stop();
+                stopWatch.Stop();
 
-            toolStripStatusLabel1.Text = stopWatch.Elapsed.ToString();
-            toolStripStatusLabel2.Text = filename;
+                toolStripStatusLabel1.Text = stopWatch.Elapsed.ToString();
+                toolStripStatusLabel2.Text = filename;
+            }
         }
     }
 }
