@@ -72,7 +72,7 @@ namespace PowerPreview
                     case ".xaml":
                     case ".css":
                     case ".razor":
-                        return Language.HTML;
+                        return Language.XML;
 
                     case ".sql":
                         return Language.SQL;
@@ -113,11 +113,12 @@ namespace PowerPreview
                     Language = language,
                     ReadOnly = true,
                     Font = new Font("Cascadia Mono", 10),
-                     ForeColor = Color.Gainsboro,
-                     BackColor = Color.FromArgb(255,30,30,30),
+                    ForeColor = Color.Gainsboro,
+                    BackColor = Color.FromArgb(255,30,30,30),
                     DefaultMarkerSize = 10,
                     IndentBackColor = Color.FromArgb(255,30,30,30),
                     LineNumberColor = Color.FromArgb(255,43,145,175),
+                    SelectionColor = SystemColors.MenuHighlight
                 };
 
                 var wordsToHighlight = Enumerable.Empty<string>();

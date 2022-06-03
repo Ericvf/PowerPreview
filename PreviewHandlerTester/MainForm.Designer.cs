@@ -69,7 +69,7 @@
         '\''};
             this.fastColoredTextBox1.AutoIndentCharsPatterns = "\r\n^\\s*[\\w\\.]+(\\s\\w+)?\\s*(?<range>=)\\s*(?<range>[^;=]+);\r\n^\\s*(case|default)\\s*[^:" +
     "]*(?<range>:)\\s*(?<range>[^;]+);\r\n";
-            this.fastColoredTextBox1.AutoScrollMinSize = new System.Drawing.Size(779, 570);
+            this.fastColoredTextBox1.AutoScrollMinSize = new System.Drawing.Size(779, 600);
             this.fastColoredTextBox1.BackBrush = null;
             this.fastColoredTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.fastColoredTextBox1.BookmarkColor = System.Drawing.Color.Purple;

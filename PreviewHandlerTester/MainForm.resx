@@ -97,6 +97,7 @@ namespace PreviewHandlers
             if (_filePath != null)
             {
                 previewHandlerControl.Preview(new FileInfo(_filePath));
+int x = 10;
             }
         }
 /*
@@ -106,6 +107,7 @@ protected override void DoPreview(T previewHandlerControl)
             if (_filePath != null)
             {
                 previewHandlerControl.Preview(new FileInfo(_filePath));
+
             }
         }
 
