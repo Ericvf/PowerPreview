@@ -10,7 +10,7 @@ Works for lots of file extensions:
 - TypeScript Java, XAML
 
 
-![Screenshot](https://github.com/Ericvf/Roslyn-Preview-Handlers/blob/4525fedc4e8c6aa8ece660ca3236ad43c5bc3dcb/Capture.PNG)
+![Screenshot](https://github.com/Ericvf/PowerPreview/raw/master/Capture.PNG)
 
 Special thanks to: https://github.com/PavelTorgashov/FastColoredTextBox
 
