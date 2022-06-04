@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
 	<PropertyGroup>
 		<TargetFramework>net6.0-windows</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -12,9 +11,4 @@
 		<DebugType>full</DebugType>
 		<IsPublishable>False</IsPublishable>
 	</PropertyGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
-	</ItemGroup>
-
 </Project>
